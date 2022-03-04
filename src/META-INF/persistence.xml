@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1"
+	xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="XayDungPhanMem">
+		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+		<class>entities.HoaDon</class>
+		<class>entities.KhachHang</class>
+		<class>entities.TaiKhoan</class>
+		<class>entities.CTHD</class>
+		<class>entities.CTHD_PK</class>
+		<class>entities.TieuDeDVD</class>
+		<class>entities.DVD</class>
+		<class>entities.LoaiDVD</class>
+		<class>entities.PhieuDatTruoc</class>
+		<class>entities.PhieuDatTruoc_PK</class>
+		<class>entities.PhieuGhiNhanThanhToanPhiTreHan</class>
+
+		<properties>
+			<property name="hibernate.dialect"
+				value="org.hibernate.dialect.SQLServer2012Dialect" />
+			<property name="javax.persistence.jdbc.driver"
+				value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />
+			<property name="javax.persistence.jdbc.url"
+				value="jdbc:sqlserver://localhost:1433;databaseName=XayDungPhanMemDB" />
+			<property name="javax.persistence.jdbc.user" value="sa" />
+			<property name="javax.persistence.jdbc.password"
+				value="sapassword" />
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+		</properties>
+	</persistence-unit>
+</persistence>
